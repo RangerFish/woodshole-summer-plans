@@ -1,0 +1,8 @@
+employee_id,project_id,role,hours_worked
+1,103,Project Lead,120
+2,101,Content Creator,80
+3,102,Developer,160
+4,101,Designer,100
+5,104,Trainer,90
+2,102,Marketing Consultant,40
+3,103,Technical Support,50

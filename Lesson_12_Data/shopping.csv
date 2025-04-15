@@ -1,0 +1,16 @@
+store_id,date,product_category,sales_amount,customer_age
+1,2024-01-01,Electronics,500.00,35
+1,2024-01-01,Clothing,150.00,28
+1,2024-01-02,Electronics,750.00,42
+1,2024-01-02,Groceries,200.00,55
+2,2024-01-01,Clothing,300.00,31
+2,2024-01-01,Groceries,175.00,47
+2,2024-01-02,Electronics,600.00,39
+2,2024-01-02,Clothing,225.00,26
+3,2024-01-01,Groceries,150.00,62
+3,2024-01-01,Electronics,450.00,33
+3,2024-01-02,Clothing,175.00,29
+3,2024-01-02,Groceries,225.00,51
+1,2024-01-03,Clothing,200.00,37
+2,2024-01-03,Electronics,800.00,45
+3,2024-01-03,Groceries,180.00,58

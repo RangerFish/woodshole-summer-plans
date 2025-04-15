@@ -1,0 +1,21 @@
+model,make,range,battery_capacity,price,speed
+Tesla Model 3,Tesla,263,NA,39990,225.3076
+Chevrolet Bolt EV,Chevrolet,259,66,31995,149.66862
+Nissan Leaf,Nissan,226,40,31670,None
+BMW i3,BMW,153,42,44450,149.66862
+Hyundai Kona Electric,Hyundai,258,64,34000,167.37136
+Kia Niro EV,Kia,239,64,39090,167.37136
+Audi e-tron,Audi,222,95,65900, 
+Jaguar I-PACE,Jaguar,234,90,69850,199.55816
+Porsche Taycan,Porsche,201,79,79900,259.10374
+Ford Mustang Mach-E,Ford,230,68,43895,209.2142
+Volkswagen ID.4,Volkswagen,250,82,39995,159.32466
+Polestar 2,Polestar,233,78,45900,204.38618
+Tesla Model S,Tesla,405,100,79990,249.4477
+Tesla Model X,Tesla,351,100,89990,249.4477
+Tesla Model Y,Tesla,326,75,53990,217.2609
+Rivian R1T,BLANK,314,135,67500,201.1675
+Lucid Air,Lucid,520,113,77400,270.36912
+Mercedes-Benz EQS,Mercedes-Benz,350,107,102310,209.2142
+Mini Cooper SE,Mini,110,32,29900,149.66862
+Volvo XC40 Recharge,Volvo,223,78,53990,180.24608

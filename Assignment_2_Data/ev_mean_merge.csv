@@ -1,0 +1,30 @@
+make,avg_range,min_range,max_range,num_models,headquarters_location,founded_year,corporate_owner
+Acura,290.7684,277.7211,303.8157,2,"Torrance, CA, USA",1986,Honda Motor Co.
+Audi,249.166152,185.1474,318.7269,34,"Herndon, VA, USA",1910,Volkswagen AG
+BMW,252.8762413793104,80.76899999999999,323.6973,50,"Munich, Germany",1916,BMW Group
+Cadillac,311.530175,301.9518,326.1825,8,"Warren, MI, USA",1902,General Motors
+Chevrolet,292.8327193548388,81.3903,492.0696,21,"Detroit, MI, USA",1911,General Motors
+Dodge,261.44304,216.2124,308.1648,5,"Billerica, MA, USA",1900,Stellantis
+Fiat,141.0351,141.0351,141.0351,1,"Auburn Hills, MI, USA",1899,Stellantis
+Fisker,313.290525,193.8456,359.7327,8,"La Palma, CA, USA",2016,Fisker Inc.
+Ford,255.42463584905656,75.7986,319.9695,17,"Dearborn, MI, USA",1903,Ford
+GMC,304.8512,278.9637,390.1764,9,"Detroit, MI, USA",1911,General Motors
+Genesis,250.3839,234.8514,282.0702,4,"Fountain Valley, CA, USA",2015,Hyundai Motor Group
+Honda,278.1353,272.7507,280.8276,3,"Torrance, CA, USA",1948,Honda Motor Co.
+Hyundai,259.32106153846155,124.26,360.9753,17,"Fountain Valley, CA, USA",1967,Hyundai Motor Group
+Jeep,286.72995,270.2655,303.1944,2,"Auburn Hills, MI, USA",1941,Stellantis
+Lucid,437.7529181818181,360.9753,520.0281,24,"Newark, CA, USA",2007,Lucid Group
+Mini,139.5262285714286,109.9701,211.8633,3,"Woodcliff Lake, NJ, USA",1959,BMW Group
+Mercedes-Benz,278.5446837209302,205.029,370.9161,16,"Stuttgart, Germany",1926,Mercedes-Benz AG
+Mitsubishi,62.13,62.13,62.13,1,"Tokyo, Japan",1870,Renault-Nissan-Mitsubishi Alliance
+Nissan,188.7331885714285,72.6921,288.9045,15,"Franklin, TN, USA",1933,Renault-Nissan-Mitsubishi Alliance
+Polestar,284.81825769230767,232.9875,349.7919,18,"GÃ¶teborg, Sweden",1996,Geely Holding Group
+Porsche,221.5010268292683,191.9817,308.1648,12,"Atlanta, GA, USA",1931,Volkswagen AG
+Rivian,337.0834909090909,257.8395,419.9988,94,"Irvine, CA, USA",2009,Rivian
+Rolls-Royce,268.4792625,251.0052,290.7684,4,"Reston, VA, USA",1904,BMW Group
+Tesla,293.5804109826589,90.7098,405.0876,71,"Austin, TX, USA",2003,Tesla
+Toyota,237.51411428571427,221.8041,252.2478,4,"Toyota City, Aichi Prefecture, Japan",1937,Toyota Motor Corporation
+Vinfast,258.2832857142857,208.7568,329.9103,6,"Los Angeles, CA, USA",2017,VinGroup
+Volkswagen,229.45851600000003,123.0174,290.7684,9,"Reston, VA, USA",1937,Volkswagen AG
+Volvo,265.885335,208.1355,310.0287,15,"Gothenburg, Sweden",1927,Geely Holding Group
+Smart,65.67141000000001,57.1596,67.7217,2,"Newark, CA, USA",1994,Mercedes-Benz AG and Geely Holding Group

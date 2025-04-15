@@ -1,0 +1,34 @@
+Year,State,County,Harvest_Count,Buck_Count,Doe_Count,Method
+2020,Wisconsin,Dane,1245,678,567,Firearm
+2021,Michigan,Oakland,987,456,531,Archery
+2019,Pennsylvania,Allegheny,1532,789,743,Muzzleloader
+2022,New York,Suffolk,876,412,464,Crossbow
+2020,Texas,Harris,2134,1098,1036,Firearm
+2021,Ohio,Franklin,765,389,376,Shotgun
+2019,Illinois,Cook,543,267,276,Archery
+2022,Minnesota,Hennepin,957,455,502,Firearm
+2020,Iowa,Polk,1087,578,509,Muzzleloader
+2021,Missouri,St. Louis,1321,687,634,Crossbow
+2019,Kentucky,Jefferson,998,521,477,Shotgun
+2022,Indiana,Marion,876,432,444,Archery
+2020,Tennessee,Davidson,1109,587,522,Firearm
+2021,Georgia,Fulton,NA,398,412,Muzzleloader
+2019,North Carolina,Wake,1243,645,598,Crossbow
+2022,Virginia,Fairfax,897,456,441,Shotgun
+2020,South Carolina,Greenville,1076,567,509,Archery
+2021,Alabama,Jefferson,1198,623,575,Firearm
+2019,Mississippi,Hinds,1032,543,489,Muzzleloader
+2022,Arkansas,Pulaski,810,412,398,Crossbow
+2020,Louisiana,East Baton Rouge,945,489,456,Shotgun
+2021,Oklahoma,Oklahoma,1087,576,511,Archery
+2019,Kansas,Johnson,876,465,411,Firearm
+2022,Nebraska,Douglas,1023,534,489,Muzzleloader
+2020,South Dakota,Minnehaha,789,412,377,Crossbow
+2021,North Dakota,Cass,765,398,367,Shotgun
+2019,Montana,Yellowstone,1132,598,534,Archery
+2022,Idaho,Ada,967,502,465,Firearm
+2020,Wyoming,Laramie,843,NA,387,Muzzleloader
+2021,Colorado,Denver,MISSING,367,412,Crossbow
+2023,California,Los Angeles,MISSING,501,NA,Firearm
+2022,Florida,Miami-Dade,1156,NA,589,Archery
+2021,Arizona,Maricopa,MISSING,478,523,Muzzleloader

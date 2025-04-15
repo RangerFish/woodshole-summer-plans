@@ -1,0 +1,51 @@
+ID,Species,Color,Habitat,Wingspan (cm)
+1,Cockatiel,Gray,Urban,30
+2,Spix's Macaw,Blue,Rainforest,80
+3,Eurasian Blue Tit,Yellow,Woodland,25
+4,American Robin,Brown,Garden,40
+5,Hummingbird,Green,Tropical,10
+6,Peregrine Falcon,Grey,Cliffs,120
+7,Bald Eagle,Brown,Lakeside,200
+8,Sparrow,Brown,Garden,20
+9,Canary,Yellow,Houses,20
+10,Lapwing,Black and White,Wetlands,70
+11,Nightingale,Brown,Woods,30
+12,Raven,Black,Mountains,150
+13,Puffin,Black and White,Oceanside,50
+14,Kea,Green,Mountains,75
+15,Swan,White,Lakeside,240
+16,Ostrich,Brown,Savannah,250
+17,Toucan,Mixed,Rainforest,50
+18,Penguin,Black and White,Aquatic,90
+19,Dove,Grey,Urbanscapes,30
+20,Crow,Black,Farms,45
+21,Finch,Yellow,Garden,25
+22,Hawk,Brown,Farm Fields,130
+23,Owl,Brown,Woods,100
+24,Lynx Sparrow,Brown,Garden,20
+25,Siskin,Yellow,Woods,20
+26,Mynah,Brown,Urbanscapes,25
+27,Roadrunner,Brown,Savannahs,50
+28,Spoonbill,Pink,Wetlands,80
+29,Cormorant,Duck-Black,Aquatic,90
+30,Jay, Blue, Bluewoodland,40 
+31,Cuckoo,Grey,Woods,30 
+32,Dart Frog,Mixed,Rainforest,10 
+33,Roadrunner,Brown,Savannahs,50 
+34,Puffin,Mixed,Oceanside,50 
+35,Hummingbird,Mixed,Tropical,10 
+36,Eurasian Jay,Mixed,Woods,40 
+37,Titmouse,Grey,Garden,25 
+38,Dove,Grey,Urbanscapes,30 
+39,Crow,Mixed,Farms,45 
+40,Raven,Grey,Rural Areas,150 
+41,Eagle,Brown,Lakeside,200 
+42,Ostrich,Brown,Savannah,250 
+43,Toucan,Mixed,Rainforest,50 
+44,Penguin,Mixed,Aquatic,90 
+45,Dove,Grey,Urbanscapes,30 
+46,Crow,Mixed,Farms,5 
+47,Falcon,Grey,Rural Areas,150 
+48,Hummingbird,Mixed,Tropical,10 
+49,Puffin,Mixed,Oceanside,50 
+50,Kea,Mixed,Mountains,75 

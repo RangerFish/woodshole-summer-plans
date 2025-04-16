@@ -2,6 +2,6 @@ services:
   - type: web
     name: woodshole-summer-plans
     env: python
-    buildCommand: cd woodshole-app && pip install -r requirements.txt
-    startCommand: gunicorn app:app
     rootDir: woodshole-app
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app

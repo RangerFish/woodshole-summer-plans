@@ -5,6 +5,14 @@ import os
 import uuid
 import calendar
 
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Wood's Hole!"
+
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
 DATA_FOLDER = "availability_data"

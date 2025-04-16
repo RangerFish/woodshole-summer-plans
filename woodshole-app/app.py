@@ -4,21 +4,19 @@ from datetime import datetime, timedelta
 import os
 import uuid
 import calendar
-import logging
 
-# Configure logging
-logging.basicConfig(level=logging.DEBUG)
-
-# Initialize Flask app
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
 
-# Define data folder and ensure it exists
-DATA_FOLDER = "availability_data"
+# Define the data folder path
+DATA_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), "availability_data")
+
+# Ensure the data folder exists
 try:
     os.makedirs(DATA_FOLDER, exist_ok=True)
 except OSError as e:
-    logging.error(f"An error occurred while creating the directory: {e}")
+    print(f"Error creating data directory: {e}")
+    raise
 
 # HTML Templates
 form_template = '''
@@ -107,6 +105,10 @@ calendar_template = '''
 </html>
 '''
 
+@app.route("/")
+def home():
+    return redirect(url_for("index"))
+
 @app.route("/woodsholesummerplans")
 def index():
     if "group_id" not in session:
@@ -115,13 +117,13 @@ def index():
 
 @app.route("/woodsholesummerplans/submit", methods=["POST"])
 def submit():
-    try:
-        name = request.form["name"]
-        start_dates = request.form.getlist("start_date[]")
-        end_dates = request.form.getlist("end_date[]")
-        group_id = session.get("group_id")
-        file_path = os.path.join(DATA_FOLDER, f"{group_id}.csv")
+    name = request.form["name"]
+    start_dates = request.form.getlist("start_date[]")
+    end_dates = request.form.getlist("end_date[]")
+    group_id = session.get("group_id")
+    file_path = os.path.join(DATA_FOLDER, f"{group_id}.csv")
 
+    try:
         if os.path.exists(file_path):
             df = pd.read_csv(file_path)
         else:
@@ -135,21 +137,17 @@ def submit():
             }])])
 
         df.to_csv(file_path, index=False)
-        return redirect(url_for("calendar"))
     except Exception as e:
-        logging.error(f"Error in submit route: {e}")
+        print(f"Error processing submission: {e}")
         return "An error occurred while processing your submission.", 500
+
+    return redirect(url_for("calendar"))
 
 @app.route("/woodsholesummerplans/calendar")
 def calendar():
-    try:
-        group_id = session.get("group_id")
-        file_path = os.path.join(DATA_FOLDER, f"{group_id}.csv")
-        if not os.path.exists(file_path):
-            return "No availability submitted yet. <a href='/woodsholesummerplans'>Back</a>"
-
-        df = pd.read_csv(file_path)
-        df["start_date"] = pd.to_datetime(df["start_date"])
-        df["end_date"] = pd.to_datetime
-::contentReference[oaicite:0]{index=0}
+    group_id = session.get("group_id")
+    file_path = os.path.join(DATA_FOLDER, f"{group_id}.csv")
+    if not os.path.exists(file_path):
+        return "No availability submitted yet. <a
+::contentReference[oaicite:3]{index=3}
  

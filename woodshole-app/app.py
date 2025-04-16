@@ -4,21 +4,23 @@ from datetime import datetime, timedelta
 import os
 import uuid
 import calendar
+import logging
 
-from flask import Flask
+# Configure logging
+logging.basicConfig(level=logging.DEBUG)
 
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Hello, Wood's Hole!"
-
+# Initialize Flask app
 app = Flask(__name__)
 app.secret_key = "supersecretkey"
-DATA_FOLDER = "availability_data"
-os.makedirs(DATA_FOLDER, exist_ok=True)
 
-# HTML TEMPLATES
+# Define data folder and ensure it exists
+DATA_FOLDER = "availability_data"
+try:
+    os.makedirs(DATA_FOLDER, exist_ok=True)
+except OSError as e:
+    logging.error(f"An error occurred while creating the directory: {e}")
+
+# HTML Templates
 form_template = '''
 <!doctype html>
 <html>
@@ -113,71 +115,41 @@ def index():
 
 @app.route("/woodsholesummerplans/submit", methods=["POST"])
 def submit():
-    name = request.form["name"]
-    start_dates = request.form.getlist("start_date[]")
-    end_dates = request.form.getlist("end_date[]")
-    group_id = session.get("group_id")
-    file_path = os.path.join(DATA_FOLDER, f"{group_id}.csv")
+    try:
+        name = request.form["name"]
+        start_dates = request.form.getlist("start_date[]")
+        end_dates = request.form.getlist("end_date[]")
+        group_id = session.get("group_id")
+        file_path = os.path.join(DATA_FOLDER, f"{group_id}.csv")
 
-    if os.path.exists(file_path):
-        df = pd.read_csv(file_path)
-    else:
-        df = pd.DataFrame(columns=["name", "start_date", "end_date"])
+        if os.path.exists(file_path):
+            df = pd.read_csv(file_path)
+        else:
+            df = pd.DataFrame(columns=["name", "start_date", "end_date"])
 
-    for start, end in zip(start_dates, end_dates):
-        df = pd.concat([df, pd.DataFrame([{
-            "name": name,
-            "start_date": start,
-            "end_date": end
-        }])])
+        for start, end in zip(start_dates, end_dates):
+            df = pd.concat([df, pd.DataFrame([{
+                "name": name,
+                "start_date": start,
+                "end_date": end
+            }])])
 
-    df.to_csv(file_path, index=False)
-    return redirect(url_for("calendar"))
+        df.to_csv(file_path, index=False)
+        return redirect(url_for("calendar"))
+    except Exception as e:
+        logging.error(f"Error in submit route: {e}")
+        return "An error occurred while processing your submission.", 500
 
 @app.route("/woodsholesummerplans/calendar")
 def calendar():
-    group_id = session.get("group_id")
-    file_path = os.path.join(DATA_FOLDER, f"{group_id}.csv")
-    if not os.path.exists(file_path):
-        return "No availability submitted yet. <a href='/woodsholesummerplans'>Back</a>"
+    try:
+        group_id = session.get("group_id")
+        file_path = os.path.join(DATA_FOLDER, f"{group_id}.csv")
+        if not os.path.exists(file_path):
+            return "No availability submitted yet. <a href='/woodsholesummerplans'>Back</a>"
 
-    df = pd.read_csv(file_path)
-    df["start_date"] = pd.to_datetime(df["start_date"])
-    df["end_date"] = pd.to_datetime(df["end_date"])
-
-    all_users = set(df["name"].unique())
-    start_date = datetime(2025, 6, 1)
-    end_date = datetime(2025, 8, 31)
-
-    availability = {d: set() for d in pd.date_range(start_date, end_date)}
-    for _, row in df.iterrows():
-        for d in pd.date_range(row["start_date"], row["end_date"]):
-            if d in availability:
-                availability[d].add(row["name"])
-
-    # Build calendar view
-    calendar_data = {}
-    current = start_date
-    while current <= end_date:
-        year, month = current.year, current.month
-        _, last_day = calendar.monthrange(year, month)
-        first_day = datetime(year, month, 1)
-        month_dates = [None] * (first_day.weekday() % 7)
-        for day in range(1, last_day + 1):
-            date = datetime(year, month, day)
-            if date in availability:
-                everyone_available = availability[date] == all_users
-            else:
-                everyone_available = False
-            month_dates.append((str(day), everyone_available))
-        while len(month_dates) % 7 != 0:
-            month_dates.append((None, False))
-        weeks = [month_dates[i:i+7] for i in range(0, len(month_dates), 7)]
-        calendar_data[first_day.strftime("%B %Y")] = weeks
-        current = current.replace(day=1) + timedelta(days=32)
-        current = current.replace(day=1)
-
-    return render_template_string(calendar_template, calendar_data=calendar_data, group_id=group_id)
-
-if __name__ == "__main__":
-    app.run(debug=False)
+        df = pd.read_csv(file_path)
+        df["start_date"] = pd.to_datetime(df["start_date"])
+        df["end_date"] = pd.to_datetime
+::contentReference[oaicite:0]{index=0}
+ 

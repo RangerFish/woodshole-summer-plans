@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.secret_key = "supersecretkey"
 DATA_FOLDER = "availability_data"
 os.makedirs(DATA_FOLDER, exist_ok=True)
-git add .
+
 # HTML TEMPLATES
 form_template = '''
 <!doctype html>
